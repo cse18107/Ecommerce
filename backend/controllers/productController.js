@@ -38,7 +38,7 @@ exports.getAllProducts = async (req, res) => {
 };
 
 //GET A PRODUCT
-exports.getAProduct = async (req, res) => {
+exports.getAProduct = async (req, res,next) => {
   try {
     const id = req.params.id;
     const product = await Product.findById(id);
@@ -57,7 +57,7 @@ exports.getAProduct = async (req, res) => {
 };
 
 // UPDATE A PRODUCT
-exports.updateProduct = async (req, res) => {
+exports.updateProduct = async (req, res,next) => {
   try {
     const id = req.params.id;
     const body = req.body;
@@ -85,7 +85,7 @@ exports.updateProduct = async (req, res) => {
 };
 
 // DELETE A PRODUCT
-exports.deleteAProduct = async (req, res) => {
+exports.deleteAProduct = async (req, res,next) => {
   try {
     const id = req.params.id;
     const product = await Product.findById(id);
