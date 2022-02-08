@@ -2,3 +2,4 @@ adding features [searching,filtering,pagination](1:24:24)-->https://youtu.be/AN3
 searching(1:29:15)-->https://youtu.be/AN3t-OmdyKA?t=5355
 filtering(1:34:48)-->https://youtu.be/AN3t-OmdyKA?t=5688
 pagination(1:44:55)-->https://youtu.be/AN3t-OmdyKA?t=6295
+authentication(1:52:19)-->https://youtu.be/AN3t-OmdyKA?t=6739
