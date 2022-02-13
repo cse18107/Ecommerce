@@ -5,4 +5,5 @@ pagination(1:44:55)-->https://youtu.be/AN3t-OmdyKA?t=6295
 authentication(1:52:19)-->https://youtu.be/AN3t-OmdyKA?t=6739
 backend user routes api(3:25:18)->https://youtu.be/AN3t-OmdyKA?t=12318
 Making Order Apis(4:08:29)->https://youtu.be/AN3t-OmdyKA?t=14909
-start from -->https://youtu.be/AN3t-OmdyKA?t=14531
+Starting with front-end(4:42:58)->https://youtu.be/AN3t-OmdyKA?t=16978 
+start from -->https://youtu.be/AN3t-OmdyKA?t=16978
