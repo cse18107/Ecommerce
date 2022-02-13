@@ -25,7 +25,13 @@ router
   );
 router.route("/product/:id").get(productControllers.getAProduct);
 
-router.route("/review").put(isAuthenticatedUser, productControllers.createProductReview)
+router
+  .route("/review")
+  .put(isAuthenticatedUser, productControllers.createProductReview);
 
+router
+  .route("/reviews")
+  .get(productControllers.getProductReviews)
+  .delete(isAuthenticatedUser, productControllers.deleteReview);
 
 module.exports = router;
