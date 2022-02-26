@@ -30,15 +30,15 @@
     color: white;
 }
 .banner::before{
-    content:"";
+    /* content:"";
     width: 100vw;
     height: 110.75vmin;
-    background-color: #ffffff;
-    position: absolute;
-    top: 0%;
-    left: 0;
-    clip-path: polygon(100% 68%,0 100%, 100% 100%);
-    max-width: 100%;
+    background-color: #ffffff; */
+    /* position: absolute; */
+    /* top: 0%;
+    left: 0; */
+    /* clip-path: polygon(100% 68%,0 100%, 100% 100%); */
+    /* max-width: 100%; */
 }
 .homeHeading {
     text-align: center;
@@ -58,7 +58,7 @@
     max-width: 100%;
 }
 .productCard {
-    width:14vmax;
+    width:12vmax;
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -68,7 +68,8 @@
     padding-bottom: 0.5vmax;
 }
 .productCard > img {
-    width: 14vmax;
+    /* width: 12vmax; */
+    height:20vmax
 }
 .productCard > div {
     margin: 0.5vmax;

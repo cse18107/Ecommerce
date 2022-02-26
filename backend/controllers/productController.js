@@ -3,7 +3,6 @@ const ErrorHandler = require("../utils/errorhandler");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const ApiFeatures = require("../utils/apifeatures");
 
-
 //CREATE A PRODUCT
 exports.createProduct = catchAsyncErrors(async (req, res) => {
   req.body.user = req.user.id;
@@ -19,7 +18,7 @@ exports.createProduct = catchAsyncErrors(async (req, res) => {
 
 // GET ALL PRODUCTS
 exports.getAllProducts = catchAsyncErrors(async (req, res) => {
-  const resultPerPage = 5;
+  const resultPerPage = 8;
   const productCount = await Product.countDocuments();
   const apiFeature = new ApiFeatures(Product.find(), req.query)
     .search()
@@ -27,14 +26,11 @@ exports.getAllProducts = catchAsyncErrors(async (req, res) => {
     .pagination(resultPerPage);
   const products = await apiFeature.query;
   res.status(200).json({
-    status: "Success",
-    Number: productCount,
-    data: {
-      products,
-    },
+    success: true,
+    productCount,
+    products,
   });
 });
-
 
 //GET A PRODUCT
 exports.getAProduct = catchAsyncErrors(async (req, res, next) => {
@@ -49,7 +45,6 @@ exports.getAProduct = catchAsyncErrors(async (req, res, next) => {
     },
   });
 });
-
 
 // UPDATE A PRODUCT
 exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
@@ -68,7 +63,6 @@ exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-
 // DELETE A PRODUCT
 exports.deleteAProduct = catchAsyncErrors(async (req, res, next) => {
   const id = req.params.id;
@@ -84,7 +78,6 @@ exports.deleteAProduct = catchAsyncErrors(async (req, res, next) => {
     },
   });
 });
-
 
 // Create New Review or Update the review
 exports.createProductReview = catchAsyncErrors(async (req, res, next) => {
@@ -119,7 +112,6 @@ exports.createProductReview = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-
 // Get All Reviews of a product
 exports.getProductReviews = catchAsyncErrors(async (req, res, next) => {
   const product = await Product.findById(req.query.id);
@@ -131,7 +123,6 @@ exports.getProductReviews = catchAsyncErrors(async (req, res, next) => {
     reviews: product.reviews,
   });
 });
-
 
 // Delete Review
 exports.deleteReview = catchAsyncErrors(async (req, res, next) => {

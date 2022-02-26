@@ -7,4 +7,4 @@ backend user routes api(3:25:18)->https://youtu.be/AN3t-OmdyKA?t=12318
 Making Order Apis(4:08:29)->https://youtu.be/AN3t-OmdyKA?t=14909
 Starting with front-end(4:42:58)->https://youtu.be/AN3t-OmdyKA?t=16978 
 start implementing redux(5:18:01)->https://youtu.be/AN3t-OmdyKA?t=19081
-start from -->https://youtu.be/AN3t-OmdyKA?t=18491
+start from -->https://youtu.be/AN3t-OmdyKA?t=20427
