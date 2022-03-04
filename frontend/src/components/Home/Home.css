@@ -9,10 +9,10 @@
 }
 .banner > h1{
     margin: 5vmax;
-    font: 600 2.5vmax;
+    font-size: 3.5vmax;
 }
 .banner > p {
-    font: 300 1.4vmax;
+    font-size:  1.4vmax;
 }
 .banner > a > button {
     margin-bottom: 5vmax;
