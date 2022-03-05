@@ -9,7 +9,7 @@ export const Header = () => {
             <Link to={"/"} className="navbar-logo">Ecommarce</Link>
             <div className="navbar-links">
                 <NavLink to={"/"} className="n-links">Home</NavLink>
-                <NavLink to={"/product"} className="n-links">Product</NavLink>
+                <NavLink to={"/products"} className="n-links">Product</NavLink>
                 <NavLink to={"/contact"} className="n-links">Contact</NavLink>
                 <NavLink to={"/about"} className="n-links">About</NavLink>
             </div>
