@@ -8,4 +8,4 @@ Making Order Apis(4:08:29)->https://youtu.be/AN3t-OmdyKA?t=14909
 Starting with front-end(4:42:58)->https://youtu.be/AN3t-OmdyKA?t=16978 
 start implementing redux(5:18:01)->https://youtu.be/AN3t-OmdyKA?t=19081
 adding filtration in frontend(6:37:08)->https://youtu.be/AN3t-OmdyKA?t=23828
-start from -->https://youtu.be/AN3t-OmdyKA?t=23828
+start from -->https://youtu.be/AN3t-OmdyKA?t=24734
