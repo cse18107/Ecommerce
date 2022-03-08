@@ -37,7 +37,7 @@ export const Header = () => {
               Home
             </NavLink>
             <NavLink to={"/products"} className="n-links">
-              Product
+              Products
             </NavLink>
             <NavLink to={"/contact"} className="n-links">
               Contact

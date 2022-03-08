@@ -11,7 +11,7 @@
   .products {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 5vmax;
+    padding: 0vmax 9.6vmax;
     justify-content: center;
     min-height: 30vh;
   }
@@ -29,11 +29,11 @@
   }
   
   .page-item {
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     list-style: none;
     border: 1px solid rgba(0, 0, 0, 0.178);
     padding: 1vmax 1.5vmax;
-    transition: all 0.3s;
+    transition: all 0.1s;
     cursor: pointer;
   }
   .page-item:first-child {
