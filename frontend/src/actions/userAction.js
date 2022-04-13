@@ -6,6 +6,8 @@ import {
     REGISTER_REQUEST,
     REGISTER_SUCCESS,
     REGISTER_FAIL,
+    LOGOUT_SUCCESS,
+    LOGOUT_FAIL,
     LOAD_USER_SUCCESS,
     LOAD_USER_FAIL,
     LOAD_USER_REQUEST,
@@ -37,7 +39,10 @@ export const register = (userData) => async (dispatch) => {
         
         dispatch({ type: REGISTER_SUCCESS, payload:data.user });
     }catch(error) {
-
+        dispatch({
+            type:REGISTER_FAIL,
+            payload:error.response.data.error
+        })
     }
 }
 
@@ -53,6 +58,21 @@ export const loadUser = () => async (dispatch) =>{
     }catch (error) {
         
         dispatch({type:LOAD_USER_FAIL,payload:error.response.data.error});
+    }
+};
+
+export const logout = () => async (dispatch) =>{
+    try{
+        dispatch({type: LOAD_USER_REQUEST});
+
+
+        await axios.get(`/api/v1/logout`);
+
+        dispatch({ type: LOGOUT_SUCCESS });
+
+    }catch (error) {
+        
+        dispatch({type:LOGOUT_FAIL,payload:error.response.data.error});
     }
 };
 
