@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useAlert } from "react-alert";
 import { logout } from "../../../actions/userAction";
+import { Backdrop } from "@material-ui/core";
 
 const UserOptions = ({ user }) => {
   const [open, setOpen] = useState(false);
@@ -46,6 +47,7 @@ const UserOptions = ({ user }) => {
 
   return (
     <Fragment>
+      <Backdrop open={open} style={{zIndex:"10"}}/>
        <SpeedDial
         ariaLabel="SpeedDial tooltip example"
         onClose={() => setOpen(false)}
