@@ -51,6 +51,7 @@ const Products = () => {
     }
     dispatch(getProduct(keyword, currentPage, price, category, ratings));
   }, [dispatch, keyword, currentPage, price, category, ratings, alert, error]);
+ 
   console.log(products);
 
   return (

@@ -57,10 +57,10 @@ export const Header = () => {
           >
             Search
           </p>
-          <Link to={"/"} className="n-icons">
+          <Link to={"/cart"} className="n-icons">
             Cart
           </Link>
-          <Link to={"/"} className="n-icons">
+          <Link to={"/account"} className="n-icons">
             Account
           </Link>
         </div>

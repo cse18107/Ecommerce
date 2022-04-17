@@ -21,6 +21,7 @@ const Home = () => {
         dispatch(getProduct());
     },[dispatch,alert, error]);
 
+    console.log(products);
 
   return (
     <Fragment>
