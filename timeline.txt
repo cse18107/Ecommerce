@@ -13,4 +13,4 @@ Loading Updating User(8:05:36)->https://youtu.be/AN3t-OmdyKA?t=29136
 Update Forget & Reset Password(9:11:48)->https://youtu.be/AN3t-OmdyKA?t=33108
 Creating Cart Component(9:48:21)->https://youtu.be/AN3t-OmdyKA?t=35301
 Receiving Payment & Creating Orders(10:35:42)->https://youtu.be/AN3t-OmdyKA?t=38142
-start from -->https://youtu.be/AN3t-OmdyKA?t=40511
+start from -->https://youtu.be/AN3t-OmdyKA?t=41154
