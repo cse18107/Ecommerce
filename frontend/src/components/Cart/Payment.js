@@ -17,6 +17,7 @@ import CreditCardIcon from "@material-ui/icons/CreditCard";
 import EventIcon from "@material-ui/icons/Event";
 import VpnKeyIcon from "@material-ui/icons/VpnKey";
 import { useNavigate } from 'react-router-dom';
+import { clearErrors, createOrder } from "../../actions/orderAction";
 
 const Payment = () => {
   const orderInfo = JSON.parse(sessionStorage.getItem("orderInfo"));
@@ -31,10 +32,19 @@ const Payment = () => {
 
   const { shippingInfo, cartItem } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.user);
-  // const { error } = useSelector((state) => state.newOrder);
+  const { error } = useSelector((state) => state.newOrder);
 
   const paymentDate = {
     amount: Math.round(orderInfo.totalPrice * 100),
+  };
+
+  const order = {
+    shippingInfo,
+    orderItems: cartItem,
+    itemsPrice: orderInfo.subtotal,
+    taxPrice: orderInfo.tax,
+    shippingPrice: orderInfo.shippingCharges,
+    totalPrice:orderInfo.totalPrice
   };
 
   const submitHandler =async (e) => {
@@ -83,6 +93,11 @@ const Payment = () => {
         alert.error(result.error);
       }else {
         if(result.paymentIntent.status === "succeeded") {
+          order.paymentInfo = {
+            id: result.paymentIntent.id,
+            status: result.paymentIntent.status,
+          };
+          dispatch(createOrder(order));
           navigate('/success');
         }else {
           alert.error("There's some issue while processing payment");
@@ -93,6 +108,13 @@ const Payment = () => {
       alert.error(error.response.data.error);
     }
   };
+
+  useEffect(()=>{
+    if(error){
+      alert.error(error);
+      dispatch(clearErrors());
+    }
+  },[dispatch,error,alert]);
 
   return (
     <Fragment>
