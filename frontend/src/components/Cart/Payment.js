@@ -30,7 +30,7 @@ const Payment = () => {
   const elements = useElements();
   const payBtn = useRef(null);
 
-  const { shippingInfo, cartItem } = useSelector((state) => state.cart);
+  const { shippingInfo, cartItems } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.user);
   const { error } = useSelector((state) => state.newOrder);
 
@@ -40,7 +40,7 @@ const Payment = () => {
 
   const order = {
     shippingInfo,
-    orderItems: cartItem,
+    orderItems: cartItems,
     itemsPrice: orderInfo.subtotal,
     taxPrice: orderInfo.tax,
     shippingPrice: orderInfo.shippingCharges,

@@ -1,7 +1,7 @@
 import "./App.css";
 import { Header } from "./components/layout/Header/Header";
 import { Footer } from "./components/layout/Footer/Footer";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Home from "./components/Home/Home.js";
 import ProductDetails from "./components/Product/ProductDetails.js";
 import Products from "./components/Product/Products.js";
@@ -21,11 +21,16 @@ import Shipping from "./components/Cart/Shipping.js";
 import ConfirmOrder from "./components/Cart/ConfirmOrder.js";
 import Payment from "./components/Cart/Payment.js";
 import OrderSuccess from "./components/Cart/OrderSuccess.js";
+import MyOrders from "./components/Order/MyOrders.js";
+import OrderDetails from "./components/Order/OrderDetails.js";
+import Dashboard from "./components/Admin/Dashboard.js";
+import ProductList from "./components/Admin/ProductList.js";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 
 function App() {
+  const navigate = useNavigate();
   const { isAuthenticated, user } = useSelector((state) => state.user);
 
   const [stripeApiKey, setStripeApiKey] = useState("");
@@ -60,6 +65,10 @@ function App() {
         )}
         {isAuthenticated && <Route path="/shipping" element={<Shipping />} />}
         {isAuthenticated && <Route path="/success" element={<OrderSuccess />} />}
+        {isAuthenticated && <Route path="/orders" element={<MyOrders/>} />}
+        {isAuthenticated && <Route path="/order/:id" element={<OrderDetails/>} />}
+        {isAuthenticated && user.role==='admin'? <Route path="/admin/dashboard" element={<Dashboard/>} />: navigate('/account')}
+        {isAuthenticated && user.role==='admin'? <Route path="/admin/products" element={<ProductList/>} />: navigate('/account')}
         {isAuthenticated && (
           <Route path="/order/confirm" element={<ConfirmOrder />} />
         )}
