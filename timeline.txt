@@ -15,4 +15,6 @@ Creating Cart Component(9:48:21)->https://youtu.be/AN3t-OmdyKA?t=35301
 Receiving Payment & Creating Orders(10:35:42)->https://youtu.be/AN3t-OmdyKA?t=38142
 User Orders & Reviews(11:38:05)->https://youtu.be/AN3t-OmdyKA?t=41885
 Creating Admin Route(12:33:16)->https://youtu.be/AN3t-OmdyKA?t=45196
-start from -->https://youtu.be/AN3t-OmdyKA?t=46943
+Finalizing Before Deployment(15:17:34)->https://youtu.be/AN3t-OmdyKA?t=55054
+Finally deploying online(15:27:00)->https://youtu.be/AN3t-OmdyKA?t=55624
+start from -->https://youtu.be/AN3t-OmdyKA?t=55624

@@ -28,6 +28,13 @@ import ProductList from "./components/Admin/ProductList.js";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
+import NewProduct from "./components/Admin/NewProduct";
+import UpdateProduct from "./components/Admin/UpdateProduct";
+import OrderList from "./components/Admin/OrderList";
+import ProcessOrder from "./components/Admin/ProcessOrder";
+import UsersList from "./components/Admin/UsersList";
+import UpdateUser from "./components/Admin/UpdateUser";
+import ProductReviews from "./components/Admin/ProductReviews";
 
 function App() {
   const navigate = useNavigate();
@@ -67,8 +74,14 @@ function App() {
         {isAuthenticated && <Route path="/success" element={<OrderSuccess />} />}
         {isAuthenticated && <Route path="/orders" element={<MyOrders/>} />}
         {isAuthenticated && <Route path="/order/:id" element={<OrderDetails/>} />}
-        {isAuthenticated && user.role==='admin'? <Route path="/admin/dashboard" element={<Dashboard/>} />: navigate('/account')}
-        {isAuthenticated && user.role==='admin'? <Route path="/admin/products" element={<ProductList/>} />: navigate('/account')}
+        {isAuthenticated && user.role==='admin' && <Route path="/admin/dashboard" element={<Dashboard/>} />}
+        {isAuthenticated && user.role==='admin' && <Route path="/admin/products" element={<ProductList/>} />}
+        {isAuthenticated && user.role==='admin' && <Route path="/admin/product" element={<NewProduct/>} />}
+        {isAuthenticated && user.role==='admin' && <Route path="/admin/product/:id" element={<UpdateProduct/>} />}
+        {isAuthenticated && user.role==='admin' && <Route path="/admin/orders" element={<OrderList/>} />}
+        {isAuthenticated && user.role==='admin' && <Route path="/admin/order/:id" element={<ProcessOrder/>} />}
+        {isAuthenticated && user.role==='admin' && <Route path="/admin/user/:id" element={<UpdateUser/>} />}
+        {isAuthenticated && user.role==='admin' && <Route path="/admin/reviews" element={<ProductReviews/>} />}
         {isAuthenticated && (
           <Route path="/order/confirm" element={<ConfirmOrder />} />
         )}
